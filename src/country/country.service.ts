@@ -7,7 +7,7 @@ import { pluck } from 'rxjs/operators';
 export class CountryService {
   private readonly DATA_SOURCE = 'https://restcountries.eu/rest/v2/all';
 
-  constructor(private readonly httpService: HttpService) { }
+  constructor(private readonly httpService: HttpService) {}
 
   public async getCountries() {
     return this.httpService.get(this.DATA_SOURCE).pipe(pluck('data'));

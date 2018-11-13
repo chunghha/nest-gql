@@ -10,7 +10,7 @@ export class Country {
   public alpha3Code?: string;
   public callingCodes?: [string];
   public capital?: string;
-  public altSpellings?: [string]
+  public altSpellings?: [string];
   public region?: string;
   public subregion?: string;
   public population?: number;
