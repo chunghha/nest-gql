@@ -4,23 +4,22 @@ FROM keymetrics/pm2:latest-alpine
 RUN mkdir -p /api
 WORKDIR /api
 
-# Bundle APP files
-COPY src src/
-COPY package.json .
-COPY yarn.lock .
-COPY ecosystem.config.js .
-COPY tsconfig.json .
-
-# Install app dependencies
+# Install the dependencies
 ENV NPM_CONFIG_LOGLEVEL warn
 RUN npm i -g yarn
+COPY package.json .
+COPY yarn.lock .
 RUN yarn
+
+# Build the API
+COPY src src/
+COPY tsconfig.json .
 RUN yarn build
 
-# Expose the listening port of your app
+# Expose the API port
 EXPOSE 3000
 
-# Show current folder structure in logs
-# SRUN ls -al -R
-
-CMD [ "pm2-runtime", "start", "ecosystem.config.js" ]
+# Run the API with pm2
+COPY ecosystem.config.js .
+ENTRYPOINT [ "pm2-runtime" ]
+CMD [ "start", "ecosystem.config.js" ]
