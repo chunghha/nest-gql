@@ -54,8 +54,6 @@ export class Language {
 
 export abstract class IQuery {
     abstract countries(): Country[] | Promise<Country[]>;
-
-    abstract temp__(): boolean | Promise<boolean>;
 }
 
 export class Translation {
