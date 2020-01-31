@@ -1,6 +1,5 @@
 import { HttpService, Injectable } from '@nestjs/common';
 
-// tslint:disable-next-line
 import { pluck } from 'rxjs/operators';
 
 @Injectable()

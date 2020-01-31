@@ -1,4 +1,3 @@
-// tslint:disable-next-line
 import { Module, HttpModule } from '@nestjs/common';
 
 import { CountryResolvers } from './country.resolvers';
