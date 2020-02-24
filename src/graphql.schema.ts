@@ -5,6 +5,7 @@
  */
 
 /* tslint:disable */
+/* eslint-disable */
 export class Bloc {
     acronym?: string;
     name?: string;
