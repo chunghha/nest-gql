@@ -27,12 +27,12 @@ type Translation {
   es: String
   fr: String
   ja: String
-  it: String  
-  br: String  
-  pt: String  
-  nl: String  
-  hr: String  
-  fa: String  
+  it: String
+  br: String
+  pt: String
+  nl: String
+  hr: String
+  fa: String
 }
 
 type Country {

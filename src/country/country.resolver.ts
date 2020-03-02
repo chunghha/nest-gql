@@ -3,7 +3,7 @@ import { Query, Resolver } from '@nestjs/graphql';
 import { CountryService } from './country.service';
 
 @Resolver('Country')
-export class CountryResolvers {
+export class CountryResolver {
   constructor(private readonly countryService: CountryService) {}
 
   @Query('countries')

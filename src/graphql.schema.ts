@@ -6,14 +6,14 @@
 
 /* tslint:disable */
 /* eslint-disable */
-export class Bloc {
+export interface Bloc {
     acronym?: string;
     name?: string;
     otherAcronyms?: string[];
     otherNames?: string[];
 }
 
-export class Country {
+export interface Country {
     name?: string;
     topLevelDomain?: string[];
     alpha2Code?: string;
@@ -40,24 +40,64 @@ export class Country {
     cioc?: string;
 }
 
-export class Currency {
+export interface Currency {
     code?: string;
     name?: string;
     symbol?: string;
 }
 
-export class Language {
+export interface Exchange {
+    base?: string;
+    date?: string;
+    AUD?: number;
+    BGN?: number;
+    BRL?: number;
+    CAD?: number;
+    CHF?: number;
+    CNY?: number;
+    CZK?: number;
+    DKK?: number;
+    EUR?: number;
+    GBP?: number;
+    HKD?: number;
+    HRK?: number;
+    HUF?: number;
+    IDR?: number;
+    ILS?: number;
+    ISK?: number;
+    JPY?: number;
+    KRW?: number;
+    MYR?: number;
+    MXN?: number;
+    NOK?: number;
+    NZD?: number;
+    PHP?: number;
+    PLN?: number;
+    RON?: number;
+    RUB?: number;
+    SEK?: number;
+    SGD?: number;
+    THB?: number;
+    TRY?: number;
+    USD?: number;
+    ZAR?: number;
+}
+
+export interface Language {
     iso639_1?: string;
     iso639_2?: string;
     name?: string;
     nativeName?: string;
 }
 
-export abstract class IQuery {
-    abstract countries(): Country[] | Promise<Country[]>;
+export interface IQuery {
+    _entities(representations: _Any[]): _Entity[] | Promise<_Entity[]>;
+    _service(): _Service | Promise<_Service>;
+    countries(): Country[] | Promise<Country[]>;
+    exchangeRate(base: string): Exchange | Promise<Exchange>;
 }
 
-export class Translation {
+export interface Translation {
     de?: string;
     es?: string;
     fr?: string;

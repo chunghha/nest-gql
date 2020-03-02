@@ -1,10 +1,10 @@
 import { Module, HttpModule } from '@nestjs/common';
 
-import { CountryResolvers } from './country.resolvers';
+import { CountryResolver } from './country.resolver';
 import { CountryService } from './country.service';
 
 @Module({
   imports: [HttpModule],
-  providers: [CountryResolvers, CountryService],
+  providers: [CountryResolver, CountryService],
 })
 export class CountryModule {}

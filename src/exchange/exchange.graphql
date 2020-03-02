@@ -1,0 +1,40 @@
+type Query {
+  exchangeRate(base: String!): Exchange
+}
+
+type Exchange @key(fields: "base") {
+  base: String
+  date: String
+  AUD: Float
+  BGN: Float
+  BRL: Float
+  CAD: Float
+  CHF: Float
+  CNY: Float
+  CZK: Float
+  DKK: Float
+  EUR: Float
+  GBP: Float
+  HKD: Float
+  HRK: Float
+  HUF: Float
+  IDR: Float
+  ILS: Float
+  ISK: Float
+  JPY: Float
+  KRW: Float
+  MYR: Float
+  MXN: Float
+  NOK: Float
+  NZD: Float
+  PHP: Float
+  PLN: Float
+  RON: Float
+  RUB: Float
+  SEK: Float
+  SGD: Float
+  THB: Float
+  TRY: Float
+  USD: Float
+  ZAR: Float
+}
