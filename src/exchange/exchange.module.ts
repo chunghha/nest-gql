@@ -1,4 +1,4 @@
-import { Module, HttpModule } from '@nestjs/common';
+import { HttpModule, Module } from '@nestjs/common';
 
 import { ExchangeResolver } from './exchange.resolver';
 import { ExchangeService } from './exchange.service';

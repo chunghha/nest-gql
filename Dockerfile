@@ -1,4 +1,6 @@
-FROM keymetrics/pm2:latest-alpine
+ARG NODE_VERSION=12
+
+FROM keymetrics/pm2:${NODE_VERSION}-alpine
 
 # Create own api folder
 RUN mkdir -p /api
