@@ -91,8 +91,6 @@ export interface Language {
 }
 
 export interface IQuery {
-    _entities(representations: _Any[]): _Entity[] | Promise<_Entity[]>;
-    _service(): _Service | Promise<_Service>;
     countries(): Country[] | Promise<Country[]>;
     exchangeRate(base: string): Exchange | Promise<Exchange>;
 }
