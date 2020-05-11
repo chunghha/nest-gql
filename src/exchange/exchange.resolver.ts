@@ -1,7 +1,7 @@
 import { Args, Query, Resolver } from '@nestjs/graphql';
 import { AsyncSubject } from 'rxjs';
 
-import { Exchange } from '../models/exchage.model';
+import { Exchange } from '../graphql.schema';
 import { CURRENCIES } from './currencies';
 import { ExchangeService } from './exchange.service';
 
