@@ -1,4 +1,4 @@
-ARG NODE_VERSION=12
+ARG NODE_VERSION=14
 
 FROM keymetrics/pm2:${NODE_VERSION}-alpine
 
@@ -8,7 +8,6 @@ WORKDIR /api
 
 # Install the dependencies
 ENV NPM_CONFIG_LOGLEVEL warn
-RUN npm i -g yarn
 COPY package.json .
 COPY yarn.lock .
 RUN yarn
@@ -16,6 +15,7 @@ RUN yarn
 # Build the API
 COPY src src/
 COPY tsconfig.json .
+COPY tsconfig.build.json .
 RUN yarn build
 
 # Expose the API port
