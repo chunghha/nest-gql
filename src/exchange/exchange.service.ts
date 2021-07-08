@@ -6,8 +6,7 @@ import { ExchangeResponse } from './exchange.model';
 
 @Injectable()
 export class ExchangeService {
-  private readonly EXCHANGE_SOURCE =
-    'https://api.exchangeratesapi.io/latest?base=';
+  private readonly EXCHANGE_SOURCE = 'https://api.frankfurter.app/latest?base=';
 
   constructor(private readonly httpService: HttpService) {}
 
