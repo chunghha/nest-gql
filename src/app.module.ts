@@ -20,7 +20,7 @@ import { ExchangeModule } from './exchange/exchange.module';
         path: join(process.cwd(), 'src/graphql.schema.ts'),
       },
       installSubscriptionHandlers: false,
-      playground: true,
+      // playground: true,
       typePaths: ['./**/*.graphql'],
     }),
   ],
